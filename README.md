@@ -88,37 +88,4 @@ The Angular application should now be running at:
 http://localhost:4200
 ```
 
----
-
-## 🌐 **Full Stack Integration**
-
-Once both the **backend** (FastAPI) and **frontend** (Angular) are running, you can test your application by navigating to:
-
-- **Backend URL**: `http://localhost:5005`
-- **Frontend URL**: `http://localhost:4200`
-
-Make sure both servers are running simultaneously in separate terminal windows.
-
----
-
-## 🔧 **Troubleshooting Tips:**
-
-### CORS Issue:
-- If you encounter **CORS issues** between FastAPI and Angular, make sure **CORS middleware** is correctly set up in the FastAPI backend to allow requests from `http://localhost:4200`.
-- Check that your **ng serve** URL matches the backend server’s URL.
-
-### Angular/NPM Issues:
-- If you face issues with **npm** or **node_modules**:
-  - Try running `npm install` again in the **Angular** directory to refresh the node modules.
-  - Ensure the **node version** matches the one specified for your project (if applicable).
-
----
-
-## 📝 **Notes:**
-
-- The **backend** is built using **FastAPI** and runs on **Uvicorn** for development.
-- The **frontend** is built with **Angular** and uses the default Angular development server (`ng serve`).
-- Make sure both the **frontend** and **backend** servers are running simultaneously for full functionality.
-
----
 
