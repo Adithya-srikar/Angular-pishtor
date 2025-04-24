@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <div class="logo">
+    <img src="comp1.png" alt="logo">
+    <span>My App</span>
+  </div>
+
+  <div class="hamburger" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <ul class="menu" [ngClass]="{ 'open': isMenuOpen }">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/about">About</a></li>
+    <li><a routerLink="/url-check">URL Check</a></li>
+    <li><a routerLink="/email-check">Email Check</a></li>
+  </ul>
+</nav>

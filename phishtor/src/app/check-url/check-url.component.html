@@ -1,0 +1,28 @@
+<div class="page-wrapper" style="background-image: url(image_bg.svg); ">
+  <div class="form-container" *ngIf="!result || checkingAnother">
+    <h1 class="title">
+      Enter the <span class="highlight">URL</span> to check
+    </h1>
+
+    <form (ngSubmit)="onSubmit()" class="form-box">
+      <input
+        type="text"
+        [(ngModel)]="url"
+        name="url"
+        placeholder="Enter the URL here"
+        required
+      />
+      <button type="submit">Submit</button>
+    </form>
+
+    <div *ngIf="loading" class="spinner"></div>
+  </div>
+
+  <div class="result-box" *ngIf="result && !checkingAnother">
+    <p>
+      <strong>{{ checkedUrl }}</strong> is
+      <span [ngClass]="result.toLowerCase()">{{ result }}</span>.
+    </p>
+    <button (click)="checkAnother()">Check another URL</button>
+  </div>
+</div>

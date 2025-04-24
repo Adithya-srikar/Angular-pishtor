@@ -1,0 +1,17 @@
+urllib3
+ipaddress
+pandas
+googlesearch-python
+bs4
+whois
+datetime
+joblib
+nltk
+timeout_decorator
+scikit-learn
+fastapi
+uvicorn[standard]
+scikit-learn
+joblib
+requests
+pydantic

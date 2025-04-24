@@ -1,0 +1,25 @@
+<div class="page-wrapper" style="background-image: url('image_bg.svg');">
+    <div class="form-container" *ngIf="!showResult">
+      <h1 class="title">Paste the <span class="highlight">Email</span> to analyze</h1>
+      <form (ngSubmit)="onSubmit()" class="form-box">
+        <textarea
+          [(ngModel)]="emailText"
+          name="emailText"
+          rows="8"
+          placeholder="Paste email content here"
+          required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div *ngIf="isLoading" class="spinner"></div>
+    </div>
+  
+    <div class="result-box" *ngIf="showResult && !isLoading">
+      <p>
+        The email is classified as: 
+        <span [ngClass]="{'safe': result === 'Ham', 'phishing': result === 'Spam'}">{{ result }}</span>
+      </p>
+      <button (click)="resetForm()">Check Another</button>
+    </div>
+  </div>
+  
